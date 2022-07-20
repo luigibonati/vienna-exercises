@@ -1,0 +1,140 @@
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.9.0-dev (git: Unknown) compiled on Jul  8 2022 at 12:54:15
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /home/etrizio@iit.local/Bin/vienna_code/plumed/build/lib/plumed
+PLUMED: For installed feature, see /home/etrizio@iit.local/Bin/vienna_code/plumed/build/lib/plumed/src/config/config.txt
+PLUMED: Molecular dynamics engine: LAMMPS
+PLUMED: Precision of reals: 8
+PLUMED: Running over 16 nodes
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 650
+PLUMED: File suffix: 
+PLUMED: FILE: plumed.dat
+PLUMED: Action UNITS
+PLUMED:   with label @0
+PLUMED:   length: A = 0.1 nm
+PLUMED:   energy: kj/mol
+PLUMED:   time: ps
+PLUMED:   charge: e
+PLUMED:   mass: amu
+PLUMED:   using physical units
+PLUMED:   inside PLUMED, Boltzmann constant is 0.00831446
+PLUMED: Action GROUP
+PLUMED:   with label O
+PLUMED:   list of atoms:
+PLUMED:  1 4 7 10 13 16 19 22 25 28 31 34 37 40 43 46 49 52 55 58 61 64 67 70 73
+PLUMED:  76 79 82 85 88 91 94 97 100 103 106 109 112 115 118 121 124 127 130 133 136 139 142 145 148
+PLUMED:  151 154 157 160 163 166 169 172 175 178 181 184 187 190 193 196 199 202 205 208 211 214 217 220 223
+PLUMED:  226 229 232 235 238 241 244 247 250 253 256 259 262 265 268 271 274 277 280 283 286 289 292 295 298
+PLUMED:  301 304 307 310 313 316 319 322 325 328 331 334 337 340 343 346 349 352 355 358 361 364 367 370 373
+PLUMED:  376 379 382 385 388 391 394 397 400 403 406 409 412 415 418 421 424 427 430 433 436 439 442 445 448
+PLUMED:  451 454 457 460 463 466 469 472 475 478 481 484 487 490 493 496 499 502 505 508 511 514 517 520 523
+PLUMED:  526 529 532 535 538 541 544 547 550 553 556 559 562 565 568 571 574 577 580 583 586 589 592 595 598
+PLUMED:  601 604 607 610 613 616 619 622 625 628 631 634 637 640 643 646
+PLUMED: Action GROUP
+PLUMED:   with label Na
+PLUMED:   list of atoms:
+PLUMED:  649
+PLUMED: Action GROUP
+PLUMED:   with label Cl
+PLUMED:   list of atoms:
+PLUMED:  650
+PLUMED: Action DISTANCE
+PLUMED:   with label dist
+PLUMED:   between atoms 649 650
+PLUMED:   using periodic boundary conditions
+PLUMED: Action COORDINATION
+PLUMED:   with label coordNa
+PLUMED:   between two groups of 1 and 216 atoms
+PLUMED:   first group:
+PLUMED:   649  
+PLUMED:   second group:
+PLUMED:   1  4  7  10  13  16  19  22  25  28  31  34  37  40  43  46  49  52  55  58  61  64  67  70  
+PLUMED:   73  76  79  82  85  88  91  94  97  100  103  106  109  112  115  118  121  124  127  130  133  136  139  142  145  
+PLUMED:   148  151  154  157  160  163  166  169  172  175  178  181  184  187  190  193  196  199  202  205  208  211  214  217  220  
+PLUMED:   223  226  229  232  235  238  241  244  247  250  253  256  259  262  265  268  271  274  277  280  283  286  289  292  295  
+PLUMED:   298  301  304  307  310  313  316  319  322  325  328  331  334  337  340  343  346  349  352  355  358  361  364  367  370  
+PLUMED:   373  376  379  382  385  388  391  394  397  400  403  406  409  412  415  418  421  424  427  430  433  436  439  442  445  
+PLUMED:   448  451  454  457  460  463  466  469  472  475  478  481  484  487  490  493  496  499  502  505  508  511  514  517  520  
+PLUMED:   523  526  529  532  535  538  541  544  547  550  553  556  559  562  565  568  571  574  577  580  583  586  589  592  595  
+PLUMED:   598  601  604  607  610  613  616  619  622  625  628  631  634  637  640  643  646  
+PLUMED:   using periodic boundary conditions
+PLUMED:   contacts are counted with cutoff 1.  Using rational switching function with parameters d0=2.2 nn=4 mm=12
+PLUMED: Action UPPER_WALLS
+PLUMED:   with label uwall
+PLUMED:   with arguments dist
+PLUMED:   added component to this action:  uwall.bias 
+PLUMED:   at 9.000000
+PLUMED:   with an offset 0.000000
+PLUMED:   with force constant 2000.000000
+PLUMED:   and exponent 2.000000
+PLUMED:   rescaled 1.000000
+PLUMED:   added component to this action:  uwall.force2 
+PLUMED: Action OPES_METAD
+PLUMED:   with label opes_d
+PLUMED:   with arguments dist
+PLUMED:   added component to this action:  opes_d.bias 
+PLUMED:   added component to this action:  opes_d.rct 
+PLUMED:   added component to this action:  opes_d.zed 
+PLUMED:   added component to this action:  opes_d.neff 
+PLUMED:   added component to this action:  opes_d.nker 
+PLUMED:   temperature = 300
+PLUMED:   beta = 0.400908
+PLUMED:   depositing new kernels with PACE = 500
+PLUMED:   expected BARRIER is 10
+PLUMED:   using target distribution with BIASFACTOR gamma = 4.00908
+PLUMED:   kernels have initial SIGMA =  0.2
+PLUMED:   kernels are truncated with KERNELS_CUTOFF = 3.26846
+PLUMED:  +++ WARNING +++ probably kernels are truncated too much
+PLUMED:   the value at cutoff is = 0.00478913
+PLUMED:   regularization EPSILON = 0.00478913
+PLUMED:   kernels will be compressed when closer than COMPRESSION_THRESHOLD = 1
+PLUMED:   using multiple MPI processes per simulation: 16
+PLUMED:   Bibliography: [3]
+PLUMED: Action OPES_METAD
+PLUMED:   with label opes_c
+PLUMED:   with arguments coordNa
+PLUMED:   added component to this action:  opes_c.bias 
+PLUMED:   added component to this action:  opes_c.rct 
+PLUMED:   added component to this action:  opes_c.zed 
+PLUMED:   added component to this action:  opes_c.neff 
+PLUMED:   added component to this action:  opes_c.nker 
+PLUMED:   temperature = 300
+PLUMED:   beta = 0.400908
+PLUMED:   depositing new kernels with PACE = 500
+PLUMED:   expected BARRIER is 10
+PLUMED:   using target distribution with BIASFACTOR gamma = 4.00908
+PLUMED:   kernels have initial SIGMA =  0.2
+PLUMED:   kernels are truncated with KERNELS_CUTOFF = 3.26846
+PLUMED:  +++ WARNING +++ probably kernels are truncated too much
+PLUMED:   the value at cutoff is = 0.00478913
+PLUMED:   regularization EPSILON = 0.00478913
+PLUMED:   kernels will be compressed when closer than COMPRESSION_THRESHOLD = 1
+PLUMED:   using multiple MPI processes per simulation: 16
+PLUMED:   Bibliography: [3]
+PLUMED: Action PRINT
+PLUMED:   with label @9
+PLUMED:   with stride 500
+PLUMED:   with arguments dist coordNa opes_d.bias opes_d.rct opes_d.zed opes_d.neff opes_d.nker opes_c.bias opes_c.rct opes_c.zed opes_c.neff opes_c.nker uwall.bias uwall.force2
+PLUMED:   on file colvar.dat
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed.dat
+PLUMED: Timestep: 0.002000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] M. Invernizzi and M. Parrinello, J. Phys. Chem. Lett. 11, 2731-2736 (2020)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   417.080458   417.080458   417.080458   417.080458
+PLUMED: 1 Prepare dependencies                       2500001     2.526432     0.000001     0.000001     0.000050
+PLUMED: 2 Sharing data                               2500001    97.042416     0.000039     0.000031     0.001427
+PLUMED: 3 Waiting for data                           2500001     4.280738     0.000002     0.000001     0.000103
+PLUMED: 4 Calculating (forward loop)                 2500001   269.634576     0.000108     0.000088     0.001586
+PLUMED: 5 Applying (backward loop)                   2500001    22.519709     0.000009     0.000007     0.000209
+PLUMED: 6 Update                                     2500001     1.974342     0.000001     0.000000     0.036502

@@ -1,0 +1,87 @@
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.9.0-dev (git: Unknown) compiled on Jul  8 2022 at 12:54:15
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /home/etrizio@iit.local/Bin/vienna_code/plumed/build/lib/plumed
+PLUMED: For installed feature, see /home/etrizio@iit.local/Bin/vienna_code/plumed/build/lib/plumed/src/config/config.txt
+PLUMED: Molecular dynamics engine: LAMMPS
+PLUMED: Precision of reals: 8
+PLUMED: Running over 16 nodes
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 650
+PLUMED: File suffix: 
+PLUMED: FILE: plumed.dat
+PLUMED: Action UNITS
+PLUMED:   with label @0
+PLUMED:   length: A = 0.1 nm
+PLUMED:   energy: kj/mol
+PLUMED:   time: ps
+PLUMED:   charge: e
+PLUMED:   mass: amu
+PLUMED:   using physical units
+PLUMED:   inside PLUMED, Boltzmann constant is 0.00831446
+PLUMED: Action GROUP
+PLUMED:   with label O
+PLUMED:   list of atoms:
+PLUMED:  1 4 7 10 13 16 19 22 25 28 31 34 37 40 43 46 49 52 55 58 61 64 67 70 73
+PLUMED:  76 79 82 85 88 91 94 97 100 103 106 109 112 115 118 121 124 127 130 133 136 139 142 145 148
+PLUMED:  151 154 157 160 163 166 169 172 175 178 181 184 187 190 193 196 199 202 205 208 211 214 217 220 223
+PLUMED:  226 229 232 235 238 241 244 247 250 253 256 259 262 265 268 271 274 277 280 283 286 289 292 295 298
+PLUMED:  301 304 307 310 313 316 319 322 325 328 331 334 337 340 343 346 349 352 355 358 361 364 367 370 373
+PLUMED:  376 379 382 385 388 391 394 397 400 403 406 409 412 415 418 421 424 427 430 433 436 439 442 445 448
+PLUMED:  451 454 457 460 463 466 469 472 475 478 481 484 487 490 493 496 499 502 505 508 511 514 517 520 523
+PLUMED:  526 529 532 535 538 541 544 547 550 553 556 559 562 565 568 571 574 577 580 583 586 589 592 595 598
+PLUMED:  601 604 607 610 613 616 619 622 625 628 631 634 637 640 643 646
+PLUMED: Action GROUP
+PLUMED:   with label Na
+PLUMED:   list of atoms:
+PLUMED:  649
+PLUMED: Action GROUP
+PLUMED:   with label Cl
+PLUMED:   list of atoms:
+PLUMED:  650
+PLUMED: Action DISTANCE
+PLUMED:   with label dist
+PLUMED:   between atoms 649 650
+PLUMED:   using periodic boundary conditions
+PLUMED: Action COORDINATION
+PLUMED:   with label coordNa
+PLUMED:   between two groups of 1 and 216 atoms
+PLUMED:   first group:
+PLUMED:   649  
+PLUMED:   second group:
+PLUMED:   1  4  7  10  13  16  19  22  25  28  31  34  37  40  43  46  49  52  55  58  61  64  67  70  
+PLUMED:   73  76  79  82  85  88  91  94  97  100  103  106  109  112  115  118  121  124  127  130  133  136  139  142  145  
+PLUMED:   148  151  154  157  160  163  166  169  172  175  178  181  184  187  190  193  196  199  202  205  208  211  214  217  220  
+PLUMED:   223  226  229  232  235  238  241  244  247  250  253  256  259  262  265  268  271  274  277  280  283  286  289  292  295  
+PLUMED:   298  301  304  307  310  313  316  319  322  325  328  331  334  337  340  343  346  349  352  355  358  361  364  367  370  
+PLUMED:   373  376  379  382  385  388  391  394  397  400  403  406  409  412  415  418  421  424  427  430  433  436  439  442  445  
+PLUMED:   448  451  454  457  460  463  466  469  472  475  478  481  484  487  490  493  496  499  502  505  508  511  514  517  520  
+PLUMED:   523  526  529  532  535  538  541  544  547  550  553  556  559  562  565  568  571  574  577  580  583  586  589  592  595  
+PLUMED:   598  601  604  607  610  613  616  619  622  625  628  631  634  637  640  643  646  
+PLUMED:   using periodic boundary conditions
+PLUMED:   contacts are counted with cutoff 1.  Using rational switching function with parameters d0=2.2 nn=4 mm=12
+PLUMED: Action PRINT
+PLUMED:   with label @6
+PLUMED:   with stride 500
+PLUMED:   with arguments dist coordNa
+PLUMED:   on file colvar.dat
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed.dat
+PLUMED: Timestep: 0.002000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1    17.575714    17.575714    17.575714    17.575714
+PLUMED: 1 Prepare dependencies                       2500001     0.651966     0.000000     0.000000     0.000060
+PLUMED: 2 Sharing data                                  5001     0.299704     0.000060     0.000046     0.000191
+PLUMED: 3 Waiting for data                              5001     0.017223     0.000003     0.000003     0.000055
+PLUMED: 4 Calculating (forward loop)                    5001     0.537056     0.000107     0.000086     0.000489
+PLUMED: 5 Applying (backward loop)                      5001     0.055463     0.000011     0.000009     0.000063
+PLUMED: 6 Update                                        5001     0.134286     0.000027     0.000017     0.000129
