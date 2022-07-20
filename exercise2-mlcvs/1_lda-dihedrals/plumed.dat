@@ -1,0 +1,25 @@
+
+# vim:ft=plumed
+
+# Compute torsion angles, as well as energy
+MOLINFO STRUCTURE=input.ala2.pdb
+phi: TORSION ATOMS=@phi-2
+psi: TORSION ATOMS=@psi-2
+theta: TORSION ATOMS=6,5,7,9
+xi: TORSION ATOMS=16,15,17,19
+ene: ENERGY
+
+# Compute descriptors
+INCLUDE FILE=../plumed-distances.dat
+
+# Compute LDA CV
+cv: CUSTOM ARG=phi,psi,theta,xi VAR=x0,x1,x2,x3 FUNC=0.953687*x0+0.001288*x1+0.300026*x2+0.021537*x3 PERIODIC=NO
+
+# Apply OPES bias
+opes: OPES_METAD ARG=cv PACE=500 BARRIER=30
+
+# Print 
+PRINT FMT=%g STRIDE=500 FILE=COLVAR ARG=*
+
+ENDPLUMED
+
